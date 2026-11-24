@@ -1,0 +1,10 @@
+# Zim modules. Apply with: zimfw install
+# Prompt: Pure
+zmodule sindresorhus/pure --source async.zsh --source pure.zsh
+
+# Completion (runs compinit)
+zmodule completion
+
+# Fish-like suggestions and highlighting (syntax-highlighting must stay last)
+zmodule zsh-users/zsh-autosuggestions
+zmodule zsh-users/zsh-syntax-highlighting

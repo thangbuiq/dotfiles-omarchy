@@ -11,7 +11,8 @@ To pull the machine's current config back into this repo, the user runs `/update
 3. For every entry in `config/omarchy/` except `plugins`: symlink it to `~/.config/omarchy/<name>`. Symlink each
    `config/omarchy/plugins/*` to `~/.config/omarchy/plugins/<name>`. Never replace `~/.config/omarchy` itself.
 4. Copy `config/superwhisper/preferences.json` to `~/.config/superwhisper/` only if it does not exist.
-5. Symlink `home/bashrc` and `home/bash_profile` to `~/.bashrc` and `~/.bash_profile`.
+5. Symlink `home/bashrc` and `home/bash_profile` to `~/.bashrc` and `~/.bash_profile`, `home/zshrc` to `~/.zshrc`, and `home/zimrc` to `~/.zimrc`.
+   Then run `zsh -ic 'zimfw install'` to fetch the Zim modules (Pure prompt). `~/.zshrc` must source Zim's `init.zsh`.
 6. Copy `fonts/*.ttf` to `~/.local/share/fonts` without overwriting, then run `fc-cache -f`.
 7. Copy `claude/claude-code-budget-status.js` to `~/.claude/`. Merge `claude/settings.json` into
    `~/.claude/settings.json`: add missing keys, keep existing values, always set `statusLine`.
@@ -29,7 +30,7 @@ To pull the machine's current config back into this repo, the user runs `/update
   `~/.config/omarchy` also holds generated files and the `superwhisper-panel` symlink.
 - `config/superwhisper/preferences.json`: copied once, never linked (the app rewrites it). It is the only Superwhisper
   file kept: `cloud-credentials.json` and device ids are intentionally not backed up.
-- `home/`: `bashrc`, `bash_profile`, linked to `~/.bashrc`, `~/.bash_profile`.
+- `home/`: `bashrc`, `bash_profile`, `zshrc`, `zimrc`, linked to `~/.bashrc`, `~/.bash_profile`, `~/.zshrc`, `~/.zimrc`.
 - `fonts/`: Inter Variable, copied to `~/.local/share/fonts`. `config/fontconfig/fonts.conf` puts it in front of
   Liberation Sans because Omarchy rewrites `sans-serif` to Liberation Sans.
 - `claude/`: `claude-code-budget-status.js` goes to `~/.claude/`; `settings.json` is merged into `~/.claude/settings.json`

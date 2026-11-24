@@ -1,0 +1,55 @@
+# Migrated from ~/.bashrc (Omarchy bash defaults, ported to zsh)
+
+# History
+HISTFILE=~/.zsh_history
+HISTSIZE=32768
+SAVEHIST=32768
+setopt APPEND_HISTORY SHARE_HISTORY HIST_IGNORE_DUPS HIST_IGNORE_SPACE
+
+# Zim framework (modules in ~/.zimrc; the completion module runs compinit)
+ZIM_HOME=~/.zim
+if [[ ! -e ${ZIM_HOME}/zimfw.zsh ]]; then
+  curl -fsSL --create-dirs -o ${ZIM_HOME}/zimfw.zsh \
+    https://raw.githubusercontent.com/zimfw/zimfw/master/zimfw.zsh
+fi
+if [[ ! ${ZIM_HOME}/init.zsh -nt ${ZIM_CONFIG_FILE:-~/.zimrc} ]]; then
+  source ${ZIM_HOME}/zimfw.zsh init
+fi
+source ${ZIM_HOME}/init.zsh
+
+# Completion
+zstyle ':completion:*' menu select
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+
+# Emacs-style line editing, like bash
+bindkey -e
+bindkey '^[[A' history-beginning-search-backward
+bindkey '^[[B' history-beginning-search-forward
+bindkey '^[[H' beginning-of-line
+bindkey '^[[F' end-of-line
+bindkey '^[[3~' delete-char
+bindkey '^[[1;5C' forward-word
+bindkey '^[[1;5D' backward-word
+
+# Omarchy defaults (shell-agnostic parts)
+: "${OMARCHY_PATH:=/usr/share/omarchy}"
+source "$OMARCHY_PATH/default/bash/envs"
+source "$OMARCHY_PATH/default/bash/aliases"
+source "$OMARCHY_PATH/default/bash/functions"
+
+# Tool integrations
+command -v mise &>/dev/null && eval "$(mise activate zsh)"
+command -v zoxide &>/dev/null && eval "$(zoxide init zsh)"
+if command -v try &>/dev/null; then
+  try() {
+    unfunction try
+    eval "$(SHELL=/bin/zsh command try init ~/Work/tries)"
+    try "$@"
+  }
+fi
+# fzf key bindings (Ctrl-R, Ctrl-T, Alt-C)
+if command -v fzf &>/dev/null && [[ -f /usr/share/fzf/key-bindings.zsh ]]; then
+  source /usr/share/fzf/key-bindings.zsh
+fi
+
+# Add your own exports, aliases, and functions here.

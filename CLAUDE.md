@@ -23,7 +23,7 @@ Personal dotfiles for an Omarchy desktop (Arch + Hyprland, Catppuccin Mocha). Th
 - `config/hypr/` is Lua-based Hyprland config (`hyprland.lua` plus bindings, input, looknfeel, monitors, autostart). `Alt+Space` opens Vicinae, overriding Omarchy's dictation toggle.
 - `claude/`: `claude-code-budget-status.js` is copied to `~/.claude/`, and `settings.json` is merged into `~/.claude/settings.json` (only `statusLine` is forced, existing keys win).
 - `fonts/` is copied to `~/.local/share/fonts`. `config/fontconfig/fonts.conf` puts Inter ahead of Liberation Sans, since Omarchy rewrites `sans-serif`.
-- `home/` holds `bashrc` and `bash_profile`, linked to `~/.bashrc` and `~/.bash_profile`.
+- `home/` holds `bashrc`, `bash_profile`, `zshrc` and `zimrc` (Zim with the Pure prompt), linked to the matching dotfiles in `~`.
 
 ## Conventions
 - Catppuccin Mocha palette throughout. No em dashes in code, comments or docs.

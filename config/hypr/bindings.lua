@@ -28,3 +28,6 @@
 
 -- Alt+Space opens Vicinae (replaces the default dictation toggle).
 o.rebind("ALT + SPACE", "Vicinae launcher", "vicinae toggle")
+
+-- Ctrl+Alt+T opens a terminal.
+o.bind("CTRL + ALT + T", "Terminal", "xdg-terminal-exec")

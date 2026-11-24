@@ -11,7 +11,7 @@ Personal dotfiles for an Omarchy desktop (Arch + Hyprland, Catppuccin Mocha). Th
 - `systemctl --user restart superwhisper`: apply Superwhisper changes.
 - Verify (from AGENTS.md):
   - `hyprctl binds -j | grep -c Vicinae`
-  - `fc-match sans-serif` (should print Inter Variable)
+  - `fc-match sans-serif` (should print Montserrat)
   - `pgrep -af chrome | grep -c force-device-scale-factor`
   - `grep statusLine ~/.claude/settings.json`
 
@@ -22,7 +22,7 @@ Personal dotfiles for an Omarchy desktop (Arch + Hyprland, Catppuccin Mocha). Th
 - `config/omarchy/plugins/thangbuiq.*` are custom Omarchy shell plugins (QML plus JS models): bar, pomodoro, sysstats, system-button. `config/omarchy/themed/*.tpl` are theme templates and `hooks/theme-set.d/` holds theme-change hooks.
 - `config/hypr/` is Lua-based Hyprland config (`hyprland.lua` plus bindings, input, looknfeel, monitors, autostart). `Alt+Space` opens Vicinae, overriding Omarchy's dictation toggle.
 - `claude/`: `claude-code-budget-status.js` is copied to `~/.claude/`, and `settings.json` is merged into `~/.claude/settings.json` (only `statusLine` is forced, existing keys win).
-- `fonts/` is copied to `~/.local/share/fonts`. `config/fontconfig/fonts.conf` puts Inter ahead of Liberation Sans, since Omarchy rewrites `sans-serif`.
+- `fonts/` is copied to `~/.local/share/fonts`. `config/fontconfig/fonts.conf` puts Montserrat ahead of Liberation Sans, since Omarchy rewrites `sans-serif`.
 - `home/` holds `bashrc`, `bash_profile`, `zshrc` and `zimrc` (Zim with the Pure prompt), linked to the matching dotfiles in `~`.
 
 ## Conventions

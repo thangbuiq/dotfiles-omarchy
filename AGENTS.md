@@ -31,7 +31,7 @@ To pull the machine's current config back into this repo, the user runs `/update
 - `config/superwhisper/preferences.json`: copied once, never linked (the app rewrites it). It is the only Superwhisper
   file kept: `cloud-credentials.json` and device ids are intentionally not backed up.
 - `home/`: `bashrc`, `bash_profile`, `zshrc`, `zimrc`, linked to `~/.bashrc`, `~/.bash_profile`, `~/.zshrc`, `~/.zimrc`.
-- `fonts/`: Inter Variable, copied to `~/.local/share/fonts`. `config/fontconfig/fonts.conf` puts it in front of
+- `fonts/`: Montserrat, copied to `~/.local/share/fonts`. `config/fontconfig/fonts.conf` puts it in front of
   Liberation Sans because Omarchy rewrites `sans-serif` to Liberation Sans.
 - `claude/`: `claude-code-budget-status.js` goes to `~/.claude/`; `settings.json` is merged into `~/.claude/settings.json`
   (statusLine added, existing keys kept). The script keeps its original dark-terminal colors.
@@ -46,6 +46,6 @@ To pull the machine's current config back into this repo, the user runs `/update
 
 ## Verify
 - `hyprctl binds -j | grep -c Vicinae`
-- `fc-match sans-serif` prints Inter Variable
+- `fc-match sans-serif` prints Montserrat
 - `pgrep -af chrome | grep -c force-device-scale-factor`
 - `grep statusLine ~/.claude/settings.json`

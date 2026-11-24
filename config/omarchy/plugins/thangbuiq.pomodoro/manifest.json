@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "thangbuiq.pomodoro",
+  "name": "Pomodoro",
+  "version": "1.0.0",
+  "author": "thangbuiq",
+  "license": "MIT",
+  "description": "A Pomodoro focus timer in the Omarchy bar: focus and break sessions, a countdown beside the clock, and a notification when each one ends.",
+  "kinds": [
+    "service",
+    "bar-widget"
+  ],
+  "keepLoaded": true,
+  "entryPoints": {
+    "service": "Service.qml",
+    "barWidget": "Panel.qml"
+  },
+  "barWidget": {
+    "displayName": "Pomodoro",
+    "description": "Focus timer with a countdown in the bar and controls in a panel.",
+    "category": "Time",
+    "aliases": ["pomodoro", "focus timer", "tomato"],
+    "allowMultiple": false,
+    "defaultSection": "centerEnd",
+    "defaults": {
+      "focusMinutes": 25,
+      "shortBreakMinutes": 5,
+      "longBreakMinutes": 15,
+      "sessionsBeforeLongBreak": 4,
+      "autoStart": false,
+      "showWhenIdle": true
+    },
+    "schema": [
+      { "key": "focusMinutes", "type": "integer", "label": "Focus length (minutes)", "min": 1, "max": 180, "step": 1, "defaultValue": 25 },
+      { "key": "shortBreakMinutes", "type": "integer", "label": "Short break (minutes)", "min": 1, "max": 60, "step": 1, "defaultValue": 5 },
+      { "key": "longBreakMinutes", "type": "integer", "label": "Long break (minutes)", "min": 1, "max": 90, "step": 1, "defaultValue": 15 },
+      { "key": "sessionsBeforeLongBreak", "type": "integer", "label": "Focus sessions before a long break", "min": 1, "max": 12, "step": 1, "defaultValue": 4 },
+      { "key": "autoStart", "type": "boolean", "label": "Start the next session automatically", "defaultValue": false },
+      { "key": "showWhenIdle", "type": "boolean", "label": "Show the bar icon when no timer is running", "defaultValue": true }
+    ]
+  }
+}

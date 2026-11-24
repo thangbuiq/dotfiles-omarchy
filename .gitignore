@@ -1,0 +1,10 @@
+*.bak
+*.bak.*
+.DS_Store
+# never back up credentials or generated state
+config/superwhisper/cloud-*.json
+config/superwhisper/*.lock
+
+# runtime files
+config/herdr/*.sock
+config/herdr/*.log

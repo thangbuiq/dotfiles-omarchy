@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "id": "thangbuiq.sysstats",
+  "name": "System stats",
+  "version": "1.0.0",
+  "author": "thangbuiq",
+  "license": "MIT",
+  "description": "CPU usage, CPU temperature and memory usage in the Omarchy bar.",
+  "kinds": [
+    "bar-widget"
+  ],
+  "entryPoints": {
+    "barWidget": "BarWidget.qml"
+  },
+  "barWidget": {
+    "displayName": "System stats",
+    "description": "CPU usage, CPU temperature and memory usage; click to open btop.",
+    "category": "System",
+    "aliases": [
+      "cpu",
+      "memory",
+      "ram",
+      "usage",
+      "temperature"
+    ],
+    "allowMultiple": false,
+    "defaultSection": "left",
+    "defaults": {
+      "interval": 2,
+      "showCpu": true,
+      "showMemory": true,
+      "showTemp": true
+    },
+    "schema": [
+      {
+        "key": "interval",
+        "type": "integer",
+        "label": "Refresh every (seconds)",
+        "min": 1,
+        "max": 30,
+        "step": 1,
+        "defaultValue": 2
+      },
+      {
+        "key": "showCpu",
+        "type": "boolean",
+        "label": "Show CPU usage",
+        "defaultValue": true
+      },
+      {
+        "key": "showTemp",
+        "type": "boolean",
+        "label": "Show CPU temperature",
+        "defaultValue": true
+      },
+      {
+        "key": "showMemory",
+        "type": "boolean",
+        "label": "Show memory usage",
+        "defaultValue": true
+      }
+    ]
+  }
+}

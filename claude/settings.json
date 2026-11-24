@@ -1,0 +1,9 @@
+{
+  "model": "sonnet",
+  "theme": "auto",
+  "statusLine": {
+    "type": "command",
+    "command": "node \"$HOME/.claude/claude-code-budget-status.js\"",
+    "refreshInterval": 3
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "name": "System stats",
+  "tooltip.cpu": "CPU %1%",
+  "tooltip.temp": "CPU temperature %1°C",
+  "tooltip.memory": "Memory %1% (%2 of %3 GiB)",
+  "tooltip.open": "Click to open btop"
+}

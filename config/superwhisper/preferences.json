@@ -1,0 +1,27 @@
+{
+  "autoVocabCaptureEnabled": true,
+  "cancelRecordingShortcut": "Escape",
+  "defaultPlaybackBehavior": "pause",
+  "deviceSelectionCounts": {},
+  "enableSoundEffects": true,
+  "language": "auto",
+  "launchAtLogin": true,
+  "linux": {
+    "asrBackend": "auto",
+    "cleanupGpuLayers": 99,
+    "languageModelID": "sl-1",
+    "mousePushToTalkShortcut": "",
+    "vocabularyBackend": "auto",
+    "voiceModelID": "sv-1"
+  },
+  "p2t": true,
+  "priorityInputDevices": {},
+  "pushToTalkShortcut": "RightAlt",
+  "recordingIndicatorStyle": "edgeGlow",
+  "showRecordingIndicator": true,
+  "soundEffectVolume": 0.3,
+  "toggleRecordingShortcut": "Ctrl+Alt+Shift+F12",
+  "tone": "casual",
+  "useDefaultInputDevice": true,
+  "userExcludedInputDevices": {}
+}

@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "id": "thangbuiq.system-button",
+  "name": "System button",
+  "version": "1.0.0",
+  "author": "thangbuiq",
+  "license": "MIT",
+  "description": "A power icon in the bar that opens the Omarchy System menu.",
+  "kinds": ["bar-widget"],
+  "entryPoints": { "barWidget": "BarWidget.qml" },
+  "barWidget": {
+    "displayName": "System button",
+    "description": "Opens the Omarchy System menu (lock, suspend, reboot, shutdown).",
+    "category": "System",
+    "aliases": ["power", "shutdown", "session"],
+    "allowMultiple": false,
+    "defaultSection": "right"
+  }
+}

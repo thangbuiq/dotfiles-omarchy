@@ -31,3 +31,6 @@ o.rebind("ALT + SPACE", "Vicinae launcher", "vicinae toggle")
 
 -- Ctrl+Alt+T opens a terminal.
 o.bind("CTRL + ALT + T", "Terminal", "xdg-terminal-exec")
+
+-- Alt+Z toggles English/Vietnamese (fcitx5 Bamboo).
+o.bind("ALT + Z", "Toggle Vietnamese input", "fcitx5-remote -t")

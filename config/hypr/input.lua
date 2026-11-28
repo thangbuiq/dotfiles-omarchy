@@ -60,7 +60,8 @@
 -- Reverse touchpad scrolling (natural scrolling).
 hl.config({
   input = {
-    sensitivity = 0.15,
+    sensitivity = -0.3,
+    accel_profile = "flat",
     touchpad = {
       natural_scroll = true,
       -- Slower scrolling (Omarchy default: 0.4).

@@ -1,7 +1,7 @@
 # dotfiles-omarchy
 
 Catppuccin Mocha setup for Omarchy (Arch + Hyprland): Hyprland bindings, Omarchy shell and custom bar plugins,
-Vicinae, Superwhisper, fontconfig (Montserrat), Neovim, tmux, terminals, Chrome flags and the Claude Code statusline.
+Vicinae, Superwhisper, fontconfig (Noto Sans), Neovim, tmux, terminals, Chrome flags and the Claude Code statusline.
 
 Paste this into Claude Code on the new machine:
 

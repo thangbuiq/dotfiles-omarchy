@@ -13,7 +13,7 @@ To pull the machine's current config back into this repo, the user runs `/update
 4. Copy `config/superwhisper/preferences.json` to `~/.config/superwhisper/` only if it does not exist.
 5. Symlink `home/bashrc` and `home/bash_profile` to `~/.bashrc` and `~/.bash_profile`, `home/zshrc` to `~/.zshrc`, and `home/zimrc` to `~/.zimrc`.
    Then run `zsh -ic 'zimfw install'` to fetch the Zim modules (Pure prompt). `~/.zshrc` must source Zim's `init.zsh`.
-6. Copy `fonts/*.ttf` to `~/.local/share/fonts` without overwriting, then run `fc-cache -f`.
+6. Run `fc-cache -f`. Fonts need the `noto-fonts` package (Noto Sans) installed.
 7. Copy `claude/claude-code-budget-status.js` to `~/.claude/`. Merge `claude/settings.json` into
    `~/.claude/settings.json`: add missing keys, keep existing values, always set `statusLine`.
 8. Manual steps to hand to the user: install packages (Hyprland/Omarchy, vicinae, superwhisper), run `hyprctl reload`
@@ -31,8 +31,8 @@ To pull the machine's current config back into this repo, the user runs `/update
 - `config/superwhisper/preferences.json`: copied once, never linked (the app rewrites it). It is the only Superwhisper
   file kept: `cloud-credentials.json` and device ids are intentionally not backed up.
 - `home/`: `bashrc`, `bash_profile`, `zshrc`, `zimrc`, linked to `~/.bashrc`, `~/.bash_profile`, `~/.zshrc`, `~/.zimrc`.
-- `fonts/`: Montserrat, copied to `~/.local/share/fonts`. `config/fontconfig/fonts.conf` puts it in front of
-  Liberation Sans because Omarchy rewrites `sans-serif` to Liberation Sans.
+- `config/fontconfig/fonts.conf` puts Noto Sans (package `noto-fonts`) in front of Liberation Sans because Omarchy
+  rewrites `sans-serif` to Liberation Sans. Noto Sans has full Vietnamese coverage.
 - `claude/`: `claude-code-budget-status.js` goes to `~/.claude/`; `settings.json` is merged into `~/.claude/settings.json`
   (statusLine added, existing keys kept). The script keeps its original dark-terminal colors.
 
@@ -46,6 +46,6 @@ To pull the machine's current config back into this repo, the user runs `/update
 
 ## Verify
 - `hyprctl binds -j | grep -c Vicinae`
-- `fc-match sans-serif` prints Montserrat
+- `fc-match sans-serif` prints Noto Sans
 - `pgrep -af chrome | grep -c force-device-scale-factor`
 - `grep statusLine ~/.claude/settings.json`

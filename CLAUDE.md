@@ -30,4 +30,4 @@ Personal dotfiles for an Omarchy desktop (Arch + Hyprland, Catppuccin Mocha). Th
 - Do not commit or push unless asked.
 - A new top-level `config/<name>` is linked by the setup procedure automatically. Anything that must not be linked needs an exception in the `AGENTS.md` Setup procedure.
 - Wallpapers are cached by path in the shell. Save an edited wallpaper under a new filename, then run `omarchy-theme-bg-set <path>`.
-- `config/chrome-flags.conf` sets `--force-device-scale-factor=0.9` for a 1366x768 screen. It is machine-specific, and Chrome must be fully restarted to apply it.
+- `config/chrome-flags.conf` sets `--force-device-scale-factor=1` for a 1366x768 screen. It is machine-specific, and Chrome must be fully restarted to apply it.

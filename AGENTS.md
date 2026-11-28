@@ -37,7 +37,7 @@ To pull the machine's current config back into this repo, the user runs `/update
   (statusLine added, existing keys kept). The script keeps its original dark-terminal colors.
 
 ## Notes
-- Chrome scale: `config/chrome-flags.conf` has `--force-device-scale-factor=0.9` for a 1366x768 screen. Adjust per machine.
+- Chrome scale: `config/chrome-flags.conf` has `--force-device-scale-factor=1` for a 1366x768 screen. Adjust per machine.
   Chrome must be fully quit and reopened for it to apply.
 - Hotkeys: `Alt+Space` opens Vicinae (override in `config/hypr/bindings.lua`, replacing Omarchy's dictation toggle).
   Superwhisper toggle is `Ctrl+Alt+Shift+F12`.
